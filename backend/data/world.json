@@ -1,20 +1,59 @@
 {
-  "map":  "data/map.png",
+  "map_image": "data/map.png",
   "users": [
-    { "id": "u1", "name": "Porto" },
-    { "id": "u2", "name": "Fernando" },
-    { "id": "u3", "name": "Phrafoa" },
-    { "id": "u4", "name": "Daniel" },
-    { "id": "u5", "name": "Rubert" },
-    { "id": "u6", "name": "Mateus" }
+    {
+      "id": 0,
+      "name": "Porto"
+    },
+    {
+      "id": 1,
+      "name": "Fernando"
+    },
+    {
+      "id": 2,
+      "name": "Phrafoa"
+    },
+    {
+      "id": 3,
+      "name": "Daniel"
+    },
+    {
+      "id": 4,
+      "name": "Rubert"
+    },
+    {
+      "id": 5,
+      "name": "Mateus"
+    }
   ],
   "cells": [
-    { "row": 0, "col": 0, "notes": [] },
-    { "row": 0, "col": 1, "notes": [] },
-    { "row": 1, "col": 0, "notes": [] },
-    { "row": 1, "col": 1, "notes": [] }
+    {
+      "x": 0,
+      "y": 0,
+      "notes": []
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "notes": []
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "notes": []
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "notes": []
+    }
   ],
   "tokens": [
-    { "id": "t1", "name": "party", "cell_row": 0, "cell_col": 0 }
+    {
+      "id": 0,
+      "name": "party",
+      "x": 0,
+      "y": 0
+    }
   ]
 }
