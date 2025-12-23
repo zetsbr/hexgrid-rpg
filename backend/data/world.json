@@ -1,7 +1,7 @@
 {
   "map_image": "data/map.png",
-  "max_x": 22,
-  "max_y": 22,
+  "max_x": 17,
+  "max_y": 17,
   "users": [
     {
       "id": 0,
