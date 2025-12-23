@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routes import world
+from app.routes import world, note
 
 app = FastAPI(
     title="Hexgrid RPG Backend",
@@ -8,6 +8,7 @@ app = FastAPI(
 )
 
 app.include_router(world.router)
+app.include_router(note.router)
 
 @app.get("/")
 def root():

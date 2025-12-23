@@ -18,10 +18,21 @@ class NoteService:
         if not cell:
             return None
         note_id = max([n.id for n in cell.notes], default=-1) + 1
+        print(note_id)
         new_note = Note(id=note_id, author_id=author_id, text=content, is_public=is_public)
         cell.notes.append(new_note)
         world_repository.save(world)
         return note_id
+
+    def get_specific_note(self, x: int, y: int, note_id: int) -> Note | None:
+        """Retorna uma nota específica de uma célula, ou None se não existir."""
+        world = world_repository.load()
+        cell = next((c for c in world.cells if c.x == x and c.y == y), None)
+        if not cell:
+            return None
+
+        note = next((n for n in cell.notes if n.id == note_id), None)
+        return note
 
     def save_note(self, x: int, y: int, note_id: int, content: str) -> bool:
         """Atualiza o conteúdo de uma nota existente."""

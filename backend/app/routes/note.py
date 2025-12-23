@@ -1,6 +1,5 @@
 from fastapi import APIRouter, Body
 from app.services import cell, note
-from app.models.cell import Cell as cell_model
 
 router = APIRouter(prefix="/note", tags=["note"])
 
@@ -22,10 +21,21 @@ def create_note(x: int, y: int, author_id: int, is_public: bool, content: str = 
         return {"status": "error", "message": "Failed to create or retrieve cell"}
     
     note_id = note_service.create_note(x, y, author_id, content, is_public)
-    if not note_id:
+    print(note_id)
+    if note_id is not None:
         return {"status": "error", "message": "Failed to create note"}
 
     return {"status": "ok", "note_id": note_id}
+
+@router.get("/get_specific_note/{x}_{y}/{note_id}")
+def get_specific_note(x: int, y: int, note_id: int):
+    if not cell_service.cell_exists(x, y):
+        return {"status": "error", "message": "Cell does not exist, flow error call the calvo"}
+
+    note = note_service.get_specific_note(x, y, note_id)
+    if note:
+        return note
+    return {"status": "error", "message": "Note not found"}
 
 @router.post("/save_note/{x}_{y}/{note_id}")
 def save_note(x: int, y: int, note_id: int, content: str = Body(...)):
