@@ -1,5 +1,7 @@
 {
   "map_image": "data/map.png",
+  "max_x": 22,
+  "max_y": 22,
   "users": [
     {
       "id": 0,
@@ -26,28 +28,7 @@
       "name": "Mateus"
     }
   ],
-  "cells": [
-    {
-      "x": 0,
-      "y": 0,
-      "notes": []
-    },
-    {
-      "x": 1,
-      "y": 0,
-      "notes": []
-    },
-    {
-      "x": 0,
-      "y": 1,
-      "notes": []
-    },
-    {
-      "x": 1,
-      "y": 1,
-      "notes": []
-    }
-  ],
+  "cells": [],
   "tokens": [
     {
       "id": 0,

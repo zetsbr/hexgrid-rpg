@@ -6,6 +6,8 @@ from app.models.token import Token
 
 class World(BaseModel):
     map_image: str
+    max_x: int
+    max_y: int
     users: List[User] = []
     cells: List[Cell] = []
     tokens: List[Token] = []
