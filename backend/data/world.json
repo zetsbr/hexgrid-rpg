@@ -1,0 +1,26 @@
+{
+  "users": [
+    { "id": "u1", "name": "Porto" },
+    { "id": "u2", "name": "Fernando" },
+    { "id": "u3", "name": "Phrafoa" },
+    { "id": "u4", "name": "Daniel" },
+    { "id": "u5", "name": "Rubert" },
+    { "id": "u6", "name": "Mateus" }
+  ],
+  "map": {
+    "image_path": "map.png",
+    "rows": 5,
+    "cols": 5,
+    "x_offset": 0,
+    "y_offset": 0
+  },
+  "cells": [
+    { "row": 0, "col": 0, "notes": [] },
+    { "row": 0, "col": 1, "notes": [] },
+    { "row": 1, "col": 0, "notes": [] },
+    { "row": 1, "col": 1, "notes": [] }
+  ],
+  "tokens": [
+    { "id": "t1", "name": "party", "cell_row": 0, "cell_col": 0 }
+  ]
+}
