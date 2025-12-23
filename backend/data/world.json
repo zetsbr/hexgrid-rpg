@@ -8,7 +8,7 @@
     { "id": "u6", "name": "Mateus" }
   ],
   "map": {
-    "image_path": "map.png",
+    "image_path": "data/map.png",
     "rows": 5,
     "cols": 5,
     "x_offset": 0,
