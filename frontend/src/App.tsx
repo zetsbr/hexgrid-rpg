@@ -1,11 +1,6 @@
-import './App.css'
+import React from 'react';
+import WorldPage from './pages/world';
 
-function App() {
-  return (
-    <div className="App">
-        <h1>Grid World</h1>
-    </div>
-  )
+export default function App() {
+    return <WorldPage />;
 }
-
-export default App
