@@ -1,6 +1,6 @@
 import React from "react";
 import { World } from "../models/world";
-import Cell from "../components/cell";
+import Cell from "./cell/cell";
 
 interface GridProps {
     world: World;
