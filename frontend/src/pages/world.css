@@ -1,11 +1,17 @@
-/* Wrapper que tem exatamente o tamanho da imagem */
-.world-wrapper {
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* borda preta */
+    width: 100%;
+    height: 100%;
+}
+
+.container {
     position: relative;
-    display: inline-block; /* tamanho do wrapper = tamanho da imagem */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* garante que nada vaze da tela */
     background-color: black; /* borda preta */
 }
 
-/* Imagem ocupa 100% do wrapper */
-.world-image {
-    display: block;
-}
+
