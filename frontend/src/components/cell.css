@@ -1,28 +1,16 @@
-.hex-cell {
+.square-cell {
     width: 80px;
-    height: 70px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.1); /* fundo transparente para ver o mapa */
+    border: 2px solid black;         /* borda preta visível */
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    clip-path: polygon(
-        50% 0%,
-        93% 25%,
-        93% 75%,
-        50% 100%,
-        7% 75%,
-        7% 25%
-    );
     transition: transform 0.1s;
-
-    /* Gradiente radial para simular borda */
-    background: radial-gradient(
-        circle at center,
-        rgba(0, 0, 0, 0.1) 50%,   /* centro bem transparente */
-        rgba(0, 0, 0, 0.7) 70%     /* borda mais escura */
-    );
+    box-sizing: border-box;
 }
 
-.hex-cell:active {
+.square-cell:active {
     transform: scale(0.95);
 }

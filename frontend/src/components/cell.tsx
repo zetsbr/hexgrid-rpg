@@ -13,7 +13,7 @@ export default function Cell({ x, y }: CellProps) {
     };
 
     return (
-        <button className="hex-cell" onClick={handleClick}>
+        <button className="square-cell" onClick={handleClick}>
             {x !== undefined && y !== undefined ? `${x},${y}` : ""}
         </button>
     );
