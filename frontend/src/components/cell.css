@@ -19,7 +19,7 @@
     background: radial-gradient(
         circle at center,
         rgba(0, 0, 0, 0.1) 50%,   /* centro bem transparente */
-        rgba(0, 0, 0, 0.5) 70%     /* borda mais escura */
+        rgba(0, 0, 0, 0.7) 70%     /* borda mais escura */
     );
 }
 
