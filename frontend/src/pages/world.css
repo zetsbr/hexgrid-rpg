@@ -1,0 +1,11 @@
+.container {
+    position: relative;
+    width: 100vw;           /* largura total da viewport */
+    height: 100vw;          /* altura total da viewport */
+    background-image: url('/map.png'); /* imagem de fundo */
+    background-size: contain;  /* ajusta a imagem inteira dentro do container */
+    background-repeat: no-repeat; /* evita repetição */
+    background-position: center;   /* centraliza a imagem */
+    background-color: black;       /* cor das bordas que sobram */
+    overflow: hidden;              /* garante que nada "vaze" */
+}

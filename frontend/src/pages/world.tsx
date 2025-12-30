@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { World } from '../models/world';
 import { getWorld } from '../api/world';
+import './world.css';
 
 export default function WorldPage() {
     const [world, setWorld] = useState<World | null>(null);
@@ -25,18 +26,9 @@ export default function WorldPage() {
     if (!world) return <div>Falha ao carregar o world</div>;
 
     return (
-    <div
-    style={{
-        position: 'relative',
-        width: '100%',
-        height: '100vh',
-        backgroundImage: `url(/map.png)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-    }}
->
-    <h1>World Grid</h1>
-    </div>
-
-  );
+        <div className="container">
+            <h1>World Grid</h1>
+            {/* Aqui adicionaremos a grid de hexágonos e os tokens */}
+        </div>
+    );
 }
