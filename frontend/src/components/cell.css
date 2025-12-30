@@ -1,6 +1,6 @@
 .square-cell {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.1); /* fundo transparente para ver o mapa */
     border: 2px solid black;         /* borda preta visível */
     cursor: pointer;
