@@ -1,16 +1,11 @@
-.container {
+/* Wrapper que tem exatamente o tamanho da imagem */
+.world-wrapper {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+    display: inline-block; /* tamanho do wrapper = tamanho da imagem */
     background-color: black; /* borda preta */
 }
 
-.background-image {
+/* Imagem ocupa 100% do wrapper */
+.world-image {
     display: block;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* mantém proporção e respeita borda preta */
 }
