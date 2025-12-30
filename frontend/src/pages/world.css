@@ -1,17 +1,21 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: black; /* borda preta */
-    width: 100%;
-    height: 100%;
+    background-color: black; 
 }
 
-.container {
+.world-wrapper {
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden; /* garante que nada vaze da tela */
-    background-color: black; /* borda preta */
+    display: flex;
+    justify-content: center; 
+    border: 5px solid black; 
+    background-color: black;
+    padding-top: 1vh;      
+    padding-bottom: 1vh;   
 }
 
-
+.world-image {
+    display: block;
+    width: 98vw;     
+    height: auto;      
+}

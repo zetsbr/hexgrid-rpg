@@ -29,12 +29,7 @@ export default function WorldPage() {
 
     return (
         <div className="world-wrapper">
-            <img
-                src="/map.png"
-                alt="World Map"
-                ref={imageRef}
-                className="world-image"
-            />
+            <img src="/map.png" alt="World Map" ref={imageRef} className="world-image"/>
             {/* Aqui a grid será sobreposta depois */}
         </div>
     );
