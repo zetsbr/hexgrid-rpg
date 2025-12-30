@@ -1,8 +1,10 @@
 .hex-cell {
     width: 80px;
     height: 70px;
-    background: transparent;
-    border: 2px solid black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     clip-path: polygon(
         50% 0%,
         93% 25%,
@@ -11,11 +13,14 @@
         7% 75%,
         7% 25%
     );
-    cursor: pointer;
     transition: transform 0.1s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    /* Gradiente radial para simular borda */
+    background: radial-gradient(
+        circle at center,
+        rgba(0, 0, 0, 0.1) 50%,   /* centro bem transparente */
+        rgba(0, 0, 0, 0.5) 70%     /* borda mais escura */
+    );
 }
 
 .hex-cell:active {

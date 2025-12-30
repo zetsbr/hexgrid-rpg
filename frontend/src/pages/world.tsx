@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { World } from '../models/world';
 import { getWorld } from '../api/world';
 import './world.css';
+import Cell from '../components/cell';
 
 export default function WorldPage() {
     const [world, setWorld] = useState<World | null>(null);
@@ -27,7 +28,9 @@ export default function WorldPage() {
 
     return (
         <div className="container">    
-            {/* Aqui você pode sobrepor a grid de hexágonos e os tokens */}
+            <div className="cell-wrapper">
+                <Cell x={0} y={0} />
+            </div>
         </div>
     );
 }
