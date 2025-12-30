@@ -37,33 +37,34 @@ export default function WorldPage() {
     if (!world) return <div>Falha ao carregar o world</div>;
 
     const cellsToRender =
-        world && imgSize
+        world && imgSize && imageRef.current
             ? Array.from({ length: world.max_y }, (_, row) =>
-                  Array.from({ length: world.max_x }, (_, col) => {
-                      const cellWidth = imgSize.width / world.max_x;
-                      const cellHeight = imgSize.height / world.max_y;
+                Array.from({ length: world.max_x }, (_, col) => {
+                    // Tamanho de cada célula para preencher a imagem
+                    const cellWidth = imgSize.width / world.max_x;
+                    const cellHeight = imgSize.height / world.max_y;
 
-                      const xPos = (col + 0.5) * cellWidth; 
-                      const yPos = (row + 0.5) * cellHeight;
+                    // Posição da célula baseada na posição real da imagem na tela
+                    const xPos = imageRef.current!.offsetLeft + (col + 0.5) * cellWidth;
+                    const yPos = imageRef.current!.offsetTop + (row + 0.5) * cellHeight;
 
-                      return (
-                          <div
-                              key={`${row}-${col}`}
-                              className="cell-wrapper"
-                              style={{
-                                  position: 'absolute',
-                                  left: `${xPos}px`,
-                                  top: `${yPos}px`,
-                                  transform: 'translate(-50%, -50%)',
-                                  width: `${cellWidth}px`,
-                                  height: `${cellHeight}px`,
-                              }}
-                          >
-                              <Cell x={col} y={row} />
-                          </div>
-                      );
-                  })
-              )
+                    return (
+                        <div
+                            key={`${row}-${col}`}
+                            style={{
+                                position: 'absolute',
+                                left: `${xPos}px`,
+                                top: `${yPos}px`,
+                                transform: 'translate(-50%, -50%)',
+                                width: `${cellWidth}px`,
+                                height: `${cellHeight}px`,
+                            }}
+                        >
+                            <Cell x={col} y={row} />
+                        </div>
+                    );
+                })
+            )
             : null;
 
     return (
