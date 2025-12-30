@@ -26,9 +26,8 @@ export default function WorldPage() {
     if (!world) return <div>Falha ao carregar o world</div>;
 
     return (
-        <div className="container">
-            <h1>World Grid</h1>
-            {/* Aqui adicionaremos a grid de hexágonos e os tokens */}
+        <div className="container">    
+            {/* Aqui você pode sobrepor a grid de hexágonos e os tokens */}
         </div>
     );
 }

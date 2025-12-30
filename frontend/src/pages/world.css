@@ -1,11 +1,28 @@
+/* world.css */
+
+/* Zera margens e padding da página */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black; /* borda preta */
+}
+
+/* Container principal */
 .container {
     position: relative;
-    width: 100vw;           /* largura total da viewport */
-    height: 100vw;          /* altura total da viewport */
-    background-image: url('/map.png'); /* imagem de fundo */
-    background-size: contain;  /* ajusta a imagem inteira dentro do container */
-    background-repeat: no-repeat; /* evita repetição */
-    background-position: center;   /* centraliza a imagem */
-    background-color: black;       /* cor das bordas que sobram */
-    overflow: hidden;              /* garante que nada "vaze" */
+    width: 100vw;
+    height: 100vh;
+    background-color: black; /* borda preta */
+
+    /* Define a imagem de fundo */
+    background-image: url('/map.png'); /* caminho da imagem na pasta public */
+    background-size: contain;   /* mantém proporção da imagem */
+    background-repeat: no-repeat; /* não repete a imagem */
+    background-position: center;  /* centraliza a imagem */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
